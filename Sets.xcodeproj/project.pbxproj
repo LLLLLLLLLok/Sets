@@ -16,6 +16,10 @@
 		5E4AE2132B0728820021BAAF /* SetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AE2122B0728820021BAAF /* SetsTests.swift */; };
 		5E4AE21D2B0728820021BAAF /* SetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AE21C2B0728820021BAAF /* SetsUITests.swift */; };
 		5E4AE21F2B0728820021BAAF /* SetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AE21E2B0728820021BAAF /* SetsUITestsLaunchTests.swift */; };
+		5E4AE22C2B07289B0021BAAF /* SetFindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AE22B2B07289B0021BAAF /* SetFindingView.swift */; };
+		5E4AE22E2B0728C20021BAAF /* ObjectDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AE22D2B0728C20021BAAF /* ObjectDetector.swift */; };
+		5E4AE2312B072D460021BAAF /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 5E4AE2302B072D460021BAAF /* Algorithms */; };
+		5E4AE2332B073AE90021BAAF /* MyObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AE2322B073AE90021BAAF /* MyObjectDetector.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		5E4AE2182B0728820021BAAF /* SetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4AE21C2B0728820021BAAF /* SetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsUITests.swift; sourceTree = "<group>"; };
 		5E4AE21E2B0728820021BAAF /* SetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5E4AE22B2B07289B0021BAAF /* SetFindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFindingView.swift; sourceTree = "<group>"; };
+		5E4AE22D2B0728C20021BAAF /* ObjectDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetector.swift; sourceTree = "<group>"; };
+		5E4AE2322B073AE90021BAAF /* MyObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MyObjectDetector.mlmodel; path = ../../TheSetDataSet/MyObjectDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4AE2312B072D460021BAAF /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +107,12 @@
 		5E4AE1FA2B0728810021BAAF /* Sets */ = {
 			isa = PBXGroup;
 			children = (
+				5E4AE2322B073AE90021BAAF /* MyObjectDetector.mlmodel */,
 				5E4AE1FB2B0728810021BAAF /* SetsApp.swift */,
 				5E4AE1FD2B0728810021BAAF /* Persistence.swift */,
 				5E4AE2022B0728810021BAAF /* ContentView.swift */,
+				5E4AE22B2B07289B0021BAAF /* SetFindingView.swift */,
+				5E4AE22D2B0728C20021BAAF /* ObjectDetector.swift */,
 				5E4AE2042B0728820021BAAF /* Assets.xcassets */,
 				5E4AE2062B0728820021BAAF /* Sets.entitlements */,
 				5E4AE1FF2B0728810021BAAF /* Sets.xcdatamodeld */,
@@ -151,6 +162,9 @@
 			dependencies = (
 			);
 			name = Sets;
+			packageProductDependencies = (
+				5E4AE2302B072D460021BAAF /* Algorithms */,
+			);
 			productName = Sets;
 			productReference = 5E4AE1F82B0728810021BAAF /* Sets.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 5E4AE1EF2B0728810021BAAF;
+			packageReferences = (
+				5E4AE22F2B072D460021BAAF /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 5E4AE1F92B0728810021BAAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4AE22E2B0728C20021BAAF /* ObjectDetector.swift in Sources */,
 				5E4AE1FC2B0728810021BAAF /* SetsApp.swift in Sources */,
 				5E4AE2012B0728810021BAAF /* Sets.xcdatamodeld in Sources */,
 				5E4AE2032B0728810021BAAF /* ContentView.swift in Sources */,
 				5E4AE1FE2B0728810021BAAF /* Persistence.swift in Sources */,
+				5E4AE2332B073AE90021BAAF /* MyObjectDetector.mlmodel in Sources */,
+				5E4AE22C2B07289B0021BAAF /* SetFindingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +632,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E4AE22F2B072D460021BAAF /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E4AE2302B072D460021BAAF /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E4AE22F2B072D460021BAAF /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5E4AE1FF2B0728810021BAAF /* Sets.xcdatamodeld */ = {
